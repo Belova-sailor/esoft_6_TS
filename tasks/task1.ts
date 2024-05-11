@@ -38,7 +38,6 @@ interface User {
   type BasicPermissions = { canEditProfile: boolean };
   // Заполните тип. Должен выявляться на основне некоторого дженерика и опредять, какой из пермишенов выдавать: Admin или Basic.
   type MyPermissions<T> = T extends "admin" ? AdminPermissions : BasicPermissions;
-  
 
   ///ЧАСТЬ 2.
 
@@ -76,5 +75,3 @@ function processValue(value: StringOrNumber) {
   return (typeof value === "string")? isString: assertIsNumber;
   // Реализуйте логику проверки и обработки значения
 }
-
-//---------------------------------------------------------------------------------
